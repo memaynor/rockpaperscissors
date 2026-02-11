@@ -3,9 +3,9 @@ import random
 choices = ["rock","paper","scissors"]
 computerscore = 0
 userscore = 0
+winscore = 2
 
-
-while(computerscore < 2 and userscore < 2):
+while(computerscore < winscore and userscore < winscore):
     computer = random.choice(choices)
     user = input("Input rock, paper, or scissors: ").lower()
     if(computer == user):
@@ -16,6 +16,7 @@ while(computerscore < 2 and userscore < 2):
     else:
         print("You lost that hand!")
         computerscore += 1
+    print("Score is player:", userscore, "computer:", computerscore)
 
 if(userscore == 2):
     print("You win!")
