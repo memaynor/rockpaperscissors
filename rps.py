@@ -1,24 +1,24 @@
 import random
 
 choices = ['rock','paper','scissors']
-computerscore = 0
-userscore = 0
-winningscore = 2
+computerScore = 0
+userScore = 0
+winningScore = 2
 
-while(computerscore < winningscore and userscore < winningscore):
+while(computerScore < winningScore and userScore < winningScore):
     computer = random.choice(choices)
     user = input("Input rock, paper, or scissors: ").lower()
     if(computer == user):
         print("Tie")
     elif(user == 'rock' and computer == 'scissors') or (user == 'paper' and computer == 'rock') or (user == 'scissors' and computer == 'paper'):
         print("You won that hand!")
-        userscore += 1
+        userScore += 1
     else:
         print("You lost that hand!")
-        computerscore += 1
-    print("Score is player:", userscore, "computer:", computerscore)
+        computerScore += 1
+    print("Score is player:", userScore, "computer:", computerScore)
 
-if(userscore == winningscore):
+if(userScore == winningScore):
     print("You win!")
 else:
     print("The computer won :(")
